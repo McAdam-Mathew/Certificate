@@ -4,6 +4,22 @@
 <meta charset="utf-8">
 <title>Digisailor</title>
 <script src="https://smtpjs.com/v3/smtp.js"></script>
+<script>
+	function correction(){
+		var ans_1a = document.getElementById("answer1_yes");
+		var ans_1b = document.getElementById("answer1_no");
+		var ans_2a = document.getElementById("answer2_yes");
+		var ans_2b = document.getElementById("answer2_no");
+
+		if(ans_1a.checked==true && ans_2b.checked==true)
+		{
+			alert("Correct")
+		}
+		else{
+			alert("Incorrect")
+		}
+	}
+</script>
 <!-- Stylesheets -->
 <link href="css/bootstrap.css" rel="stylesheet">
 <link href="css/main.css" rel="stylesheet">
@@ -94,14 +110,14 @@
 											<tr>
 												<td data-label="s_no">1</td>
 												<td data-label="Question">Hi this is the question could you able to answer this ? Hi this is the question could you able to answer this ? Hi this is the question could you able to answer this ?</td>
-												<td data-label="Yes"><input type="radio" name="answer_1"></td>
-												<td data-label="No"><input type="radio" name="answer_1"></td>
+												<td data-label="Yes"><input type="radio" id="answer1_yes" name="answer_1" value="True"></td>
+												<td data-label="No"><input type="radio" id="answer1_no" name="answer_1" value="False"></td>
 											</tr>
 											<tr>
 												<td data-label="s_no">2</td>
 												<td data-label="Question">Hi this is the question could you able to answer this ? Hi this is the question could you able to answer this ? Hi this is the question could you able to answer this ?</td>
-												<td data-label="Yes"><input type="radio" name="yes"></td>
-												<td data-label="No"><input type="radio" name="yes"></td>
+												<td data-label="Yes"><input type="radio" id="answer2_yes" name="answer_2" value="True"></td>
+												<td data-label="No"><input type="radio" id="answer2_no" name="answer_2" value="False"></td>
 											</tr>
 										</tbody>
 									</table>
@@ -111,16 +127,14 @@
 					</div>
 				</div>
 			<div class="contact-form">
-					<form method="post" action="connection.php">
 						<div class="row clearfix">
 								<div class="col-lg-12 col-md-12 col-sm-12 text-center form-group">
 									
-									<button class="theme-btn btn-style-four" type="submit" id="submit" name="submit-form" onclick="sendEmail();"><span class="txt">Register</span></button>
+									<button class="theme-btn btn-style-four" type="submit" id="submit" name="submit-form" onclick="correction();"><span class="txt">Register</span></button>
 								</div>
 							
 						</div>
-					</form>
-	
+					
 			</div>
 			</div>
 		</div>
